@@ -2,9 +2,11 @@
     "name": "node-api",
     "main": "server.js",
     "dependencies": {
+        "bluereq": "^2.1.5",
         "body-parser": "~1.0.1",
         "express": "~4.0.0",
         "mongoose": "~3.6.13",
+        "wikidata-sdk": "^5.6.3",
         "wikidata-search": "^1.0.3"
     }
 }

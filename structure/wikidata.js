@@ -2,6 +2,8 @@ var WikidataSearch = require('wikidata-search').WikidataSearch;
 var wikidataSearch = new WikidataSearch()
 var util = require('util');
 
+var wdk = require('wikidata-sdk');
+
 var exports = module.exports = {};
 
 exports.searching = function(field, res, cb){
@@ -41,9 +43,8 @@ function ListarEntidades(entities, cb){
 	
 	entities.forEach(function(result, index, array){
 			
-		var entityId = result.id;
-		
-		
+		var entityId = result.id;		
+
 		wikidataSearch.getEntities([entityId], true, function(result, err) {
 
 			if (err) {
